@@ -1,0 +1,18 @@
+<table width= "220" height = "100" >
+	
+		<tr>
+			<td>
+<div class="menu">
+
+<div class="identity">Logged in as:<%= session[:username] %></div>
+<ul>
+	<li><%= link_to("Manage Content", :controller => 'subjects')%></li>
+	<li><%= link_to("Manage Admin Users", :controller => 'admin_users')%></li>
+		<li><%= link_to("Comment", :controller => 'comments')%>
+	<li><%= link_to("Logout",:controller => 'access',:action => 'logout')%></li>
+
+	</ul>
+	</div>
+	</td>
+	</tr>
+	</table>

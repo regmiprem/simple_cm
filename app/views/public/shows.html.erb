@@ -1,0 +1,61 @@
+
+
+<div id="ok">
+<table>
+ <td><%=  raw @page.content %></td>
+ </table>
+
+
+<h2>Comments</h2>
+
+    <% @page.comments.each do |section| %>
+    <p>
+	<strong>Commenter:</strong>
+	<%= section.commenter %>
+	</p>
+	
+	<p>
+		<strong>Comment:</strong>
+		<%= raw section.body %>
+		
+		
+	</p>
+	<%= section.id %>
+	<p>
+  <%= link_to("Delete", :action => 'delete', :id => section.id, :td =>@page.id, :confirm => 'Are you sure?') %>
+
+</p>
+	<br/>
+	_____________________________________________________________
+<% end %>
+
+
+
+
+ 
+<h2>Add a comment:</h2>
+<%= form_for(:comment, :url => {:action => 'com'}) do |f| %>
+
+<p>
+	<font color="red">*</font><%= f.label :commenter %><br />
+	<%= f.text_field :commenter %>
+	</p>
+		<p>
+	<font color="red">*</font><%= f.label :email %><br/>
+	<%= f.text_field :email %>
+	
+</p>
+	
+	<p>
+		<font color="red">*</font><%= f.label :body %><br/>
+		<%= f.text_area :body %>
+		</p>
+	
+		<p>
+			<%= f.submit %>
+			</p>
+			 <input name="id" type="hidden" value= "<%=@page.id%>" />
+			<% end %>
+			</div>
+
+				

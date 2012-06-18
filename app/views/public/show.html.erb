@@ -1,0 +1,21 @@
+<h2><%= @page.name %></h2>
+<div id="ok">
+	<%= will_paginate @take %>
+<% @take.each do |section| %>
+  <div class="section">
+  	
+  		<table>
+  	
+    <% case section.content_type
+       when 'HTML' %>
+         <%= raw section.content %>
+    <% when 'text' %>
+        <p><%= section.content %></p>
+       
+    <% end %>
+    </table>
+    </div>
+  
+  _____________________________________________________________________________________________
+<% end %>
+</div>

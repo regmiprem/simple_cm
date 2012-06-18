@@ -1,0 +1,24 @@
+<% @page_title ="Subject List"%>
+<%= will_paginate @take %>
+<div class =" Comment list">
+<div><%= pluralize(@ho, 'Comments')%> found</div>
+<table class="listing" summary="Comment_list">
+
+	<tr class="header">
+	<th> Commenter </th>
+	<th> Email addr </th>
+	<th> Messages </th>
+	<th> Delete </th>
+	</tr>
+	<% @take .each do |take| %>
+	<tr class="<%= cycle('odd', 'even')%>">
+
+	<td><%= take.commenter %> </td>
+	<td><%= take.email %></td>
+	<td><%= take.body %> </td>
+	<td class="actions">
+		<%= link_to("Delete",{:action => 'delete',:id=> take.id },:class => 'action delete')%></td>
+	</tr>
+	<% end %>
+	</table>
+	</div>

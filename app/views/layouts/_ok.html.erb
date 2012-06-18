@@ -1,0 +1,14 @@
+
+<h2> Click and give your feedback</h2>
+<% sections ||= []%>
+<ul>
+	<% sections.each do |subject| %>
+	<li>
+		<%= link_to_unless_current(subject.name, :action => 'shows', :id => subject.id)%>
+		<%= link_to_unless_current("#{ subject.comments.size } com" ,:action => 'shows', :id => subject.id)%> 
+	
+		
+				<% end %>
+				</ul>
+<%= image_tag('a.jpg',:size => '180x340',:alt => "Rails logo")%>
+

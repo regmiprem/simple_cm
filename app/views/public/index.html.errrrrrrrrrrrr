@@ -1,0 +1,23 @@
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+
+image1 = new Image();
+image1.src = "/home/prem/Documents/simple_cm/app/assets/images/images/biking.jpg";
+
+// End -->
+</script>
+</HEAD>
+
+<!-- STEP TWO: Insert this code into the BODY of your HTML document  -->
+
+<BODY>
+
+<a href="" onmouseover="image1.src='/home/prem/Documents/simple_cm/app/assets/images/images/biking.jpg';"
+onmouseout="image1.src='/home/prem/Documents/simple_cm/app/assets/images/images/vacation.jpg';">
+<img name="image1" src="/home/prem/Documents/simple_cm/app/assets/images/images/vacation.jpg" border=0></a>
+
+</BODY>
+<h1> high</h1>

@@ -1,0 +1,38 @@
+<h1>Demo#index</h1>
+<h1> Hello World  from index page </h1>
+<%= link_to('Go back to hello page', {:action =>'hello',:id=>20, :page=>5 })%>
+<%= image_tag('rails.png',:size => '50x64',:alt => "Rails logo")%>
+<!-- <img src="/images/rails.png" alt="Rails logo" height="64" width="50"/> -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+ 
+<style>
+#makeMeDraggable { width: 300px; height: 300px; background: red; }
+</style>
+ 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+ 
+<script type="text/javascript">
+ 
+$( init );
+ 
+function init() {
+  $('#makeMeDraggable').draggable();
+}
+ 
+</script>
+ 
+</head>
+<body>
+ 
+<div id="content" style="height: 400px;">
+  <div id="makeMeDraggable"> </div>
+</div>
+ 
+</body>
+</html>
