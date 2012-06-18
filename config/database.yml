@@ -1,0 +1,9 @@
+development:
+  adapter: mysql
+  database: simple_cm
+  username: root
+  password: braindigit
+  host:     127.0.0.1
+  pool: 5
+  timeout: 5000
+
