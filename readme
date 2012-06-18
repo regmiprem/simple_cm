@@ -1,0 +1,10 @@
+At first 
+run bundle
+change inside config/database.yml as ur username and password
+inside app/controllers/admin_users_controller
+make #before_filter :confirm_logged_in
+then open ur page 
+at first create admin user
+and then make inside app/controllers/admin_users_controller
+before_filter :confirm_logged_in
+then try on adding subjects,pages and section and view your front end.
